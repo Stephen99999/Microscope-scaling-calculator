@@ -1,0 +1,81 @@
+/* Animate a colorful background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #8b91ff, #4adede);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientBG {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Vibrant, semi-transparent container with pop-in animation */
+  .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+    animation: popIn 1.5s ease-out;
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Input and button styles with smooth transitions and hover effects */
+  input, button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+  
+  input {
+    background: #f9f9f9;
+  }
+  
+  input:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(123, 104, 238, 0.6);
+  }
+  
+  /* Bold gradient button with hover effect and scale animation */
+  button {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    transform: scale(1.05);
+  }
+  
+  /* Creative result display */
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4caf50;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
