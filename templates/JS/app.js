@@ -5,7 +5,7 @@ document.getElementById('calcForm').addEventListener('submit', function (e) {
   const specimenSize = document.getElementById('specimenSize').value;
   const magnification = document.getElementById('magnification').value;
 
-  fetch('/calculate', {
+  fetch('https://microscope-scaling-calculator.onrender.com/calculate', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: `username=${encodeURIComponent(username)}&specimenSize=${encodeURIComponent(specimenSize)}&magnification=${encodeURIComponent(magnification)}`
